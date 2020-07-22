@@ -7,6 +7,7 @@ steps to use-
    module.exports = {
    Api_Key: "<Your Key Here>",
    };
+   your key inside the double quotes
 4. Now go to directory using terminal and type npm install
 5. Now type npm start
 6. Now go to http://localhost:5000/
