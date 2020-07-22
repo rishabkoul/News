@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" type="image/png" href="newspaper.png" />
+    <title>Indian News Headlines</title>
+    <style>
+      @media screen and (min-width: 800px) {
+        .width {
+          width: 30%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+      }
+    </style>
+  </head>
+
+  <body class="text-center" style="background-color: #eef0ce;">
+    <h1>Indian News Top Headlines</h1>
+    <h4>
+      Click <a href="/"><img width="30" src="newspaper.png" alt="" /></a> to get
+      the latest news
+    </h4>
+    <% articles.forEach(function(article) { %>
+
+    <img src="<%= article.urlToImage %>" width="300" alt="" />
+    <center>
+      <a href="<%= article.url%>"
+        ><h4 class="width"><%= article.title %></h4></a
+      >
+    </center>
+    <% }); %>
+    <div>
+      Icons made by
+      <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+        >Freepik</a
+      >
+      from
+      <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </div>
+  </body>
+</html>
