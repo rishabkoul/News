@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
   newsapi.v2
     .topHeadlines({
       country: "in",
+      pageSize: 100,
     })
     .then((response) => {
       //   console.log(response.articles);
